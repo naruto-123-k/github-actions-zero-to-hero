@@ -3,6 +3,7 @@ on:
     workflow-dispatch:
 
 jobs:
+    # every jobs needs separate runner , it is a called parellelism
     code:
         runs-on: ubuntu-latest
         steps:
@@ -10,17 +11,20 @@ jobs:
               run: echo "Code clone from github"
 
     build:
+        needs: [code]
         runs-on: ubuntu-latest
         steps:
             - name: build docker container
               run: echo "docker container build"
 
     test:
+        needs : [build]
         runs-on: ubuntu-latest
         steps:
             - name: test docker container
-              run: echo "docker container exec."
+              run: echo "Testing the container"
     deploy:
+        needs : [build,test]
         runs-on: ubuntu-latest
         steps:
             - name: Deploying the app
