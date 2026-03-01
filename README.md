@@ -1,3 +1,6 @@
-# github-actions-zero-to-hero
-This is a zero to hero github actions repository
-This is a mark down file
+# GitHub Actions : Zero To Hero
+
+## Workflows
+
+- [Hello](.github/workflows/hello.yml)
+- [CICD Demo](.github/workflows/cicd.yml)
