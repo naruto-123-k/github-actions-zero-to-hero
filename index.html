@@ -1,1 +1,256 @@
-<h1>Hello Dosto</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Srijan Giri | Laravel Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: 0.4s ease;
+        }
+
+        .glass:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #d1c4e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about p {
+            line-height: 1.8;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.08);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.12);
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: 0.4s ease;
+        }
+
+        .contact a:hover {
+            background: #fff;
+            color: #764ba2;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Hero Section -->
+        <div class="glass">
+            <header>
+                <h1>Srijan Giri</h1>
+                <p>Laravel Developer | Backend Engineer | Scalable Web Architect</p>
+            </header>
+        </div>
+
+        <!-- About Section -->
+        <div class="glass about">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a passionate Laravel Developer with 1.2+ years of hands-on experience
+                building scalable web applications. I specialize in authentication systems,
+                RBAC, API development, queue systems, payment integrations, and clean architecture.
+                I have worked with Laravel, Node.js, Express, MySQL, Redis, and modern frontend tools.
+                My focus is writing optimized, maintainable, and production-ready backend systems.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="glass">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="skills">
+                <div class="skill-card">Laravel</div>
+                <div class="skill-card">PHP</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Express</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">Redis</div>
+                <div class="skill-card">JWT & Sanctum</div>
+                <div class="skill-card">REST APIs</div>
+                <div class="skill-card">Docker</div>
+                <div class="skill-card">React / Next.js</div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="glass">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Electronic Health Report System</h3>
+                    <p>
+                        Built a complete patient management system with appointments,
+                        medical reports, image handling, and medicine tracking using
+                        Laravel and Node.js.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Lead Filtering & Role Management</h3>
+                    <p>
+                        Developed hierarchical role-based access control with complex
+                        filtering logic, union queries, and session-based filtering
+                        in Laravel.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Secure Authentication System</h3>
+                    <p>
+                        Implemented JWT-based login flow, 2FA OTP verification,
+                        and Sanctum authentication for API security.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="glass contact">
+            <h2 class="section-title">Let's Connect</h2>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Email Me</a>
+        </div>
+
+        <footer>
+            © 2026 Srijan Giri | Designed with Modern Glass UI
+        </footer>
+
+    </div>
+</body>
+
+</html>
