@@ -34,8 +34,8 @@ jobs:
         run: echo "Testing the container by docker run"
 
   deploy:
-    if: ${{ github.event.inputs.enviroment == 'stagging' }}
-    needs: [build,test]
+    if: ${{ github.event.inputs.environment == 'stagging' }}
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: deploy docker container
