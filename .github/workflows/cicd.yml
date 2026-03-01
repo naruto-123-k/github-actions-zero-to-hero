@@ -1,6 +1,6 @@
 name: CICD
 on:
-    workflow-dispatch:
+    workflow_dispatch:
 
 jobs:
     # every jobs needs separate runner , it is a called parellelism
