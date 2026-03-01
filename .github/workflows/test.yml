@@ -1,0 +1,42 @@
+name: test
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'This is the environment where the workflow runs'
+        options:
+          - dev
+          - prod
+          - stagging
+        default: dev
+        required: true
+        type: choice
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "Code clone from github by using git clone"
+
+  build:
+    needs: [code]
+    runs-on: ubuntu-latest
+    steps:
+      - name: build docker container
+        run: echo "docker container build by docker build"
+
+  test:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: test docker container
+        run: echo "Testing the container by docker run"
+
+  deploy:
+    needs: [build,test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy docker container
+        run: echo "Deploying the container "
+ 
